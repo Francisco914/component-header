@@ -1,0 +1,32 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="component-header">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      p{
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 30px; 
+      }
+    </style>
+    <p>[[title]]</p>
+  </template>
+
+  <script>
+    class ComponentHeader extends Polymer.Element {
+      static get is() { return 'component-header'; }
+      static get properties() {
+        return {
+          title: {
+            type: String,
+          }
+        };
+      }
+    }
+
+    window.customElements.define(ComponentHeader.is, ComponentHeader);
+  </script>
+</dom-module>
